@@ -8,15 +8,20 @@ body {
     padding-top: env(safe-area-inset-top);
     padding-left: env(safe-area-inset-left);
     padding-right: env(safe-area-inset-right);
+    background-color: #061414;
   }
   
   .footer {
     padding-bottom: env(safe-area-inset-bottom);
+    background-color: #061414;
   }
   .toptext{
     margin: 0px;
+    padding-bottom: 5px;
     display: flex;
     justify-content: center;
+    color: rgb(255, 255, 255);
+    
   }
   .navbarup{
     margin: 0 auto;
@@ -27,7 +32,7 @@ body {
    
     
     height: 34px;
-    width: 324px;
+    width: 353px;
     background-color:rgba(255, 255, 255, 0.04);
     border-radius: 12px;
   }
@@ -39,12 +44,14 @@ body {
 .colortextgreen{
   text-decoration: none;
   color: #9DFF00;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .colortextwhite{
   text-decoration: none;
   color: rgb(255, 255, 255);
 }
 .lunedì{
+  font-family: Arial, Helvetica, sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -56,9 +63,12 @@ body {
 }
 .separator{
   height: 20px;
-  width: 64px;
+  width: 71px;
   border-left: 1px solid rgba(255, 255, 255, 0.11) ;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+h1{
+  font-family: Arial, Helvetica, sans-serif;
 }

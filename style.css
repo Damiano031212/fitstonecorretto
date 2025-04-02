@@ -24,7 +24,7 @@ body {
     
   }
   .navbarup{
-    margin: 0 auto;
+    margin: 5px auto;
    
     display: flex;
     justify-content: center;

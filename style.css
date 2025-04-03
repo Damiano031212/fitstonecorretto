@@ -14,7 +14,6 @@ body {
 .footer {
   padding-bottom: env(safe-area-inset-bottom);
   background-color: #061414;
-  position: fixed;
 }
 .toptext{
   margin: 0px;
@@ -205,9 +204,16 @@ h5{
   margin: 0px;
 }
 .navbardown{
-  margin: 0 auto;
-  height: 85px;
-  width: 393px;
+  position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 85px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+
   background-color: #0B2525;
 }
-

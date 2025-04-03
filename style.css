@@ -213,7 +213,76 @@ h5{
     justify-content: space-around;
     align-items: center;
     padding: 10px 0;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
 
   background-color: #0B2525;
+}
+
+.icon_obbiettivi{
+  margin-bottom: 10px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 23px;
+  height: 23px;
+  background-image: url(obbiettivi.svg);
+  background-size: contain; /* Oppure 'cover' per riempire */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.obbiettivi{
+  height: 100px;
+  width: 57px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+
+.condividi{
+  height: 100px;
+  width: 57px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+ 
+}
+.icon_share{
+  margin-bottom: 10px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 23px;
+  height: 23px;
+  background-image: url(share.svg);
+  background-size: contain; /* Oppure 'cover' per riempire */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.center_text_share{
+  display: flex;
+  justify-content: center;
+}
+p{
+ margin: 0px;
+ font-family: Arial, Helvetica, sans-serif;
+}
+.icon_profile{
+  margin-bottom: 10px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30px;
+  height: 30px;
+  background-image: url(person.svg);
+  background-size: contain; /* Oppure 'cover' per riempire */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.profilo{
+  height: 100px;
+  width: 57px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+.center_text_profile{
+  display: flex;
+  justify-content: center;
 }

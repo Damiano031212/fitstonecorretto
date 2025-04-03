@@ -69,9 +69,6 @@ body {
   justify-content: center;
   align-items: center;
 }
-h1{
-  font-family: Arial, Helvetica, sans-serif;
-}
 .percentage{
   margin: 10px auto;
   width: 353px;
@@ -99,4 +96,34 @@ h1{
 }
 .tittlecard h2{
   color: rgb(255, 255, 255);
+}
+h3{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+}
+.dailytraining{
+    height: 22px;
+    width: 215px;
+    margin: 0 auto;
+    transform: translateX(-67px);
+ 
+}
+.card{
+    height: 349px;
+    width: 241px;
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+
+    background-color: #000000;
+    border-radius: 11px;
+    margin: 10px auto;
+    transform: translateX(-57px);
+    box-shadow: 0px 0px 4px 1px rgba(255, 255, 255, 0.25);
+}
+.img{
+    height: 160px;
+    width: 231px;
+    background-color: #9DFF00;
+    border-radius: 11px;
 }

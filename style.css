@@ -14,6 +14,7 @@ body {
 .footer {
   padding-bottom: env(safe-area-inset-bottom);
   background-color: #061414;
+  position: fixed;
 }
 .toptext{
   margin: 0px;
@@ -105,7 +106,7 @@ h3{
   height: 22px;
   width: 215px;
   margin: 0 auto;
-  transform: translateX(-67px);
+  transform: translateX(-58px);
 
 }
 .card{
@@ -131,11 +132,11 @@ h3{
   
 }
 .container_exercise{
+
   gap: 10px;
   padding-left: 5px;
   margin: 10px auto;
   width: 239px;
-  height: 54;
   display: flex;
   flex-wrap: wrap;
   
@@ -178,10 +179,10 @@ h5{
   display: flex;
   align-items: center;
   margin-left: 10px;
-    margin-top: 22px;
+    margin-top: 20px;
 }
 .start_button{
-  margin: 14.5px auto;
+  margin: 16.5px auto;
   width: 230px;
   height: 45px;
   background-color: rgba(255, 255, 255, 0.11);
@@ -191,6 +192,7 @@ h5{
   align-items: center;
 }
 .buttontext{
+  height: 40px;
   text-decoration: none;
 }
 .buttontext h3{
@@ -200,4 +202,12 @@ h5{
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0px;
 }
+.navbardown{
+  margin: 0 auto;
+  height: 85px;
+  width: 393px;
+  background-color: #0B2525;
+}
+

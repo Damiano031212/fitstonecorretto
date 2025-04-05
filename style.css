@@ -357,10 +357,7 @@ h5{
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
-    padding: 10px 0;
-
-    background: linear-gradient(
-      to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(to top, rgba(0, 0, 0, 1) 33%, rgba(0, 0, 0, 0) 100%);
 }
 
 .icon_obbiettivi{

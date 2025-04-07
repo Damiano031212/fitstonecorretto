@@ -7,7 +7,12 @@ body {
   background-color: #061414;
   height: 170vh;
 }
-
+.body_size_x{
+  margin: 0;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  background-color: #061414;
+  height: 50vh;
+}
 .header {
   padding-top: env(safe-area-inset-top);
   padding-left: env(safe-area-inset-left);

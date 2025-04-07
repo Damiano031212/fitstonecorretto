@@ -553,7 +553,8 @@ p{
   align-items: center;
   border: none;
   background-color: #00000000;
-  margin-left: 48vh;
+  margin : 20px auto;
+  transform: translateX(157px);
   height: 44px;
   width: 44px;
 }

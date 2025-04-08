@@ -33,7 +33,10 @@ function highlightCenteredWeight() {
   if (selectedItem) {
     selectedItem.classList.add('selected');
     selectedValue.textContent = `Peso selezionato: ${selectedItem.textContent}`;
-    localStorage.setItem('pesoSelezionato', selectedItem.textContent);
+    
+    // Salva solo il numero nel localStorage (senza "kg")
+    const weightNumber = parseInt(selectedItem.textContent);
+    localStorage.setItem('pesoSelezionato', weightNumber);
   }
 }
 
@@ -45,7 +48,7 @@ carousel.addEventListener('scroll', () => {
 // Scroll iniziale al valore salvato (se esiste)
 window.addEventListener('load', () => {
   const saved = localStorage.getItem('pesoSelezionato');
-  if (saved) {
+  if (saved !== null) {
     const index = parseInt(saved);
     const itemWidth = carousel.children[0].offsetWidth;
     const scrollLeft = itemWidth * index - (carousel.offsetWidth - itemWidth) / 2;
@@ -55,6 +58,8 @@ window.addEventListener('load', () => {
     highlightCenteredWeight();
   }
 });
+
+// --- Parte invariata delle reps ---
 const dropdown = document.getElementById('repsDropdown');
 
 // Aggiunge le opzioni da 1 a 50

@@ -2,7 +2,6 @@ const carousel = document.getElementById("carousel");
 
 // Flag per abilitare il carosello dopo il primo tocco/click
 let isCarouselActive = false;
-let items = [];
 
 // Funzione per iniziare il carosello dopo il primo tocco
 function activateCarousel() {
@@ -24,23 +23,7 @@ for (let i = 0; i <= 500; i++) {
   const item = document.createElement("div");
   item.classList.add("carousel-item");
   item.textContent = `${i} kg`;
-  items.push(item);
   carousel.appendChild(item);
-}
-
-// Duplicare gli item per l'effetto infinito
-function duplicateItems() {
-  const totalItems = items.length;
-  items.forEach(item => {
-    const clone = item.cloneNode(true);
-    carousel.appendChild(clone);
-  });
-
-  // Aggiungi gli item all'inizio per un carosello ciclico
-  items.reverse().forEach(item => {
-    const clone = item.cloneNode(true);
-    carousel.prepend(clone);
-  });
 }
 
 // Rilevazione dell'elemento centrato
@@ -94,61 +77,40 @@ function handleCenterDetection() {
 
 // Gestione del doppio click per input manuale con tastierino nativo
 function handleDoubleClickInput() {
-  // Ottieni l'elemento di input per il peso manuale
   const inputElement = document.getElementById("manualWeightInput");
 
-  // Mostra l'input e abilita l'interazione
-  inputElement.style.opacity = "1"; // Rende visibile l'input
-  inputElement.style.pointerEvents = "auto"; // Abilita l'interazione con l'input
-  inputElement.focus(); // Imposta il focus sull'input
-  inputElement.value = ""; // Resetta il valore dell'input
+  // Mostra l'input, attiva il focus
+  inputElement.style.opacity = "1";
+  inputElement.style.pointerEvents = "auto";
+  inputElement.focus();
+  inputElement.value = "";
 
-  // Funzione per gestire la conferma dell'input
   function handleInputConfirm() {
-    // Converte il valore dell'input in un numero intero
     const value = parseInt(inputElement.value, 10);
-
-    // Controlla se il valore è valido (numero tra 0 e 500)
     if (!isNaN(value) && value >= 0 && value <= 500) {
-      // Ottieni tutti gli elementi del carosello
       const items = document.querySelectorAll(".carousel-item");
-
-      // Trova l'elemento corrispondente al valore inserito
       const target = Array.from(items).find(item => item.textContent === `${value} kg`);
-
-      // Se l'elemento esiste, scorri fino a centrarlo
       if (target) {
         target.scrollIntoView({ behavior: "smooth", inline: "center" });
       }
     } else if (inputElement.value !== "") {
-      // Mostra un messaggio di errore se il valore non è valido
       alert("Inserisci un numero valido tra 0 e 500.");
     }
 
-    // Rimuovi il focus dall'input
     inputElement.blur();
-
-    // Nascondi l'input e disabilita l'interazione
-    inputElement.style.opacity = "0"; // Rende invisibile l'input
-    inputElement.style.pointerEvents = "none"; // Disabilita l'interazione con l'input
-
-    // Rimuovi i listener per evitare duplicazioni
+    inputElement.style.opacity = "0";
+    inputElement.style.pointerEvents = "none";
     inputElement.removeEventListener("blur", handleInputConfirm);
     inputElement.removeEventListener("keydown", handleKeyDown);
   }
 
-  // Funzione per gestire la pressione del tasto "Enter"
   function handleKeyDown(e) {
-    // Se il tasto premuto è "Enter", conferma l'input
     if (e.key === "Enter") {
       handleInputConfirm();
     }
   }
 
-  // Aggiungi il listener per la perdita di focus sull'input
   inputElement.addEventListener("blur", handleInputConfirm);
-
-  // Aggiungi il listener per la pressione dei tasti
   inputElement.addEventListener("keydown", handleKeyDown);
 }
 
@@ -167,7 +129,4 @@ window.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-
-  // Duplica gli items per ottenere l'effetto di carosello infinito
-  duplicateItems();
 });

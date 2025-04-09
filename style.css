@@ -676,7 +676,7 @@ p{
   overflow-x: scroll;
   overflow-y: hidden;
   display: flex;
-  gap: 20px;
+  gap: 10px;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   background-color: #ffffff;

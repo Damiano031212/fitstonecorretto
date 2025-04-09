@@ -69,7 +69,7 @@ function handleCenterDetection() {
       console.log("Peso selezionato:", centered.textContent);
       // Salva nel localStorage
       localStorage.setItem("pesoSelezionato", centered.textContent);
-    }, 1500); // Tempo di attesa aggiornato a 1500 ms (1,5 secondi)
+    }, 500); // Tempo di attesa aggiornato a 500 ms (mezzo secondo)
   }
 }
 
